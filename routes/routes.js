@@ -14,3 +14,6 @@ router.post('/:id', getComments);
 router.post('/:id/post_id', createComment);
 router.patch('/:id/post_id', updateComment)
 router.delete('/:id/post_id', deleteComment)
+
+
+export default router;

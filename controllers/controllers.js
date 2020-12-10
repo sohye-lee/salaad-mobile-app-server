@@ -1,10 +1,11 @@
 import mongoose from 'mongoose';
-import { MenuModel, CommentModel } from '../models/models.js';
+import MenuModel  from '../models/MenuModel.js';
+import CommentModel from '../models/CommentModel.js';
 
 export const getMenus = async (req, res) => {
     try {
-        const postMenus = await MenuModel.find();
-        res.status(200).json(postMenus)
+        const menus = await MenuModel.find();
+        res.status(200).json(menus)
 
     } catch (error) {
         res.status(404).json({ message: error.message })
